@@ -14,7 +14,7 @@ This image contains the necessary dependencies and matching SDL libraries to run
 This image is indended to be used as a base-image for Kivy applications:
 
 ```
-FROM: mrtux/kivy-rpi-headless:bullseye-2.1
+FROM: mrtux/kivy-rpi-headless:2.1-bullseye
 ```
 
 ### Requirements

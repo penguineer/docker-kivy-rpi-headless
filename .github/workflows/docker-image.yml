@@ -19,14 +19,14 @@ jobs:
 
       - name: Docker meta
         id: meta
-        uses: docker/metadata-action@v3
+        uses: docker/metadata-action@v4
         with:
           images: mrtux/kivy-rpi-headless
           tags: |
             # raw tag
             type=ref,event=tag
             # tag without patch counter
-            type=match,pattern=(.*)-.*,enable=${{ github.event_name == 'push tag' }}
+            type=match,pattern=(.*)-.*,enable=${{ startsWith(github.ref, 'refs/tags/') }},group=1
             # generate latest from default branch
             type=raw,value=latest,enable=${{ github.ref == format('refs/heads/{0}', github.event.repository.default_branch) }}
 
