@@ -11,10 +11,10 @@ This image contains the necessary dependencies and matching SDL libraries to run
 
 ### Dockerfile
 
-This image is indended to be used as a base-image for Kivy applications:
+This image is intended to be used as a base-image for Kivy applications:
 
 ```
-FROM: mrtux/kivy-rpi-headless:2.1-bullseye
+FROM: mrtux/kivy-rpi-headless:2.1-bookworm
 ```
 
 ### Requirements
@@ -24,7 +24,7 @@ Especially Kivy has been compiled with regard the SDL libraries, so it should no
 
 The following requirements are safe and will match the installation in the container:
 ```
-Cython==0.29.32
+Cython==0.29.37
 Kivy==2.1.0
 ```
 
